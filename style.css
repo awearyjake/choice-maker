@@ -1,0 +1,91 @@
+
+/* Chosen item (defines what attributes will be applied to the chosen item text) */
+.chosen-item {
+	color: lightgreen;
+	font-weight: bold;
+}
+
+/* Chosen item if auto-remove is checked. */
+.auto-remove {
+	color: red;
+	font-weight: bold;
+}
+
+/* Cycling hightlight */
+.cycling-highlight {
+	color: grey;
+}
+
+.remove-item {
+	cursor: pointer;
+	color: red;
+	font-weight: bold;
+	font-size: 1.25em;
+	line-height: 1;
+	position: absolute;
+	left: 400px;
+}
+
+/* Change color of X when hovered */
+.remove-item:hover{
+	color: #F5B9B9;
+}
+
+.display-area li {
+	display: inline-block;
+	position: relative;
+	padding-right: 25px;
+	max-width: 400px;
+}
+
+/* Body styling (overall site) */
+body {
+	background-color: black;
+	color: white;
+	font-family: 'Consolas', 'Courier New', monospace;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+/*  */
+#user-input {
+	background-color: transparent;
+	border: none;
+	color: white;
+	font-family: 'Consolas', 'Courier New', monospace;
+	caret-color: white;
+}
+
+/*  */
+button {
+	background-color: transparent;
+	border: none;
+	color: white;
+	font-family: 'Consolas', 'Courier New', monospace;
+	cursor: pointer;
+}
+
+button:hover{
+	color: grey;
+}
+
+#subtitle {
+	color: blue;
+	padding-left: 114.5px;
+}
+
+/* Disable User Interaction Overlay */
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#overlay.active {
+	z-index: 1000;
+}

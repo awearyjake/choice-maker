@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choice Maker</title>
+	<!-- CSS Link -->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- Disable User Function Overlay -->
+<div id="overlay"></div>
+
+<!-- Burning Logo -->
+<img src="burning.gif" alt="Animated program heading." id="main-heading">
+<p id="subtitle">A tool for choice paralysis.</p>
+
+	
+<!-- User Input and Display Area -->
+	<!-- Paragraph element that serves as an area for the text you want to display, also with a unique ID (display-area) for Javascript. -->
+    <ul id="display-area"></ul>
+	
+	<!-- Creates a text box for user input, using "Type something here..." as placeholder text. -->
+    <input type="text" id="user-input" placeholder="Type something here...">
+	
+<!-- Choose button -->
+<button id="choose-button">Choose</button>
+	
+<!-- Reset button -->
+<button id="reset-button">Reset List</button>
+	
+<!-- Remove chosen item checkbox -->
+<br>
+<input type="checkbox" id="auto-remove">
+<label for="auto-remove">Remove chosen item after selection.</label>
+
+<!-- Mute checkbox -->
+<br>
+<input type="checkbox" id="mute-audio">
+<label for="mute-audio">Mute audio.</label>
+
+<!--------------------------------->
+	
+<!-- Points this HTML file to a Javascript file -->
+	<!-- KEEP AT BOTTOM OF BODY -->
+    <script src="script.js"></script>
+	
+</body>
+</html>
