@@ -3,6 +3,9 @@
 let userInput = document.getElementById("user-input");
 let displayArea = document.getElementById("display-area");
 
+//
+let addItemButton = document.getElementById("add-item-button");
+
 // Put user cursor in "user-input" element on boot.
 userInput.focus();
 
@@ -50,6 +53,50 @@ userInput.addEventListener("keydown", function(event) {
             userInput.value = "";
         }
     }
+});
+
+// Adds an event listener that listens for a key press.
+addItemButton.addEventListener("click", function(event) {
+    // Checks if the key pressed is the "Enter" key
+        // Defines variable "userText" as the value of variable "userInput"
+        let userText = userInput.value;
+        
+        // Checks if the "userText" is empty. If not, then proceed.
+        if (userText !== "") {
+            // Assigns variable "newListItem" as a created HTML "list item" element.
+            let newListItem = document.createElement("li");
+
+            // Use the value of the "userText" variable and make it the text content of the variable "newListItem."
+            newListItem.textContent = userText;
+			
+			/* === Remove Individual List Item === */
+			// Adds a remove button for each individual list item.
+            // Creates a variable called "removeButton". Within that variable, creates an HTML span element.
+            let removeButton = document.createElement("span");
+			
+			// Defines the "textContent" property of the "removeButton" span HTML element as "x".
+            removeButton.textContent = "x";
+			
+			// Adds the CSS class "remove-item" to "removeButton"
+            removeButton.classList.add("remove-item");
+            
+            // Gives a child element, "removeButton", to the parent element, "newListItem." This means that removeButton is nested within the
+			// newListItem element.
+            newListItem.appendChild(removeButton);
+
+            // Makes the button listen for the event of a "click."
+            removeButton.addEventListener("click", function() {
+				// Refers to this element, "removeButton", and removes its parent element (which includes "removeButton" itself.)
+                this.parentElement.remove();
+            });
+			
+
+            // Puts the content of the variable "newListItem" at the beginning of the display area.
+            displayArea.append(newListItem);
+
+            // Replace whatever is in the text box with nothing.
+            userInput.value = "";
+        }
 });
 
 /* ==================== */
